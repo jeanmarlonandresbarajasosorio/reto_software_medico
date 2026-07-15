@@ -1,13 +1,7 @@
-propel:
-  article:
-    _attributes: { phpName: Article }
+dispositivo:
+    _attributes: { phpName: Dispositivo }
     id:          ~
-    title:       { type: varchar(255), required: true }
-    body:        { type: longvarchar }
-    category_id: { type: integer, foreignTable: category, foreignReference: id }
-    created_at:  ~
-
-  category:
-    _attributes: { phpName: Category }
-    id:          ~
-    name:        { type: varchar(255), required: true }
+    anio:        { type: integer, required: true }
+    memoria:     { type: varchar, size: 50, required: true }
+    fecha_mantenimiento: { type: date, required: true }
+    created_at:  ~  

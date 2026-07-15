@@ -1,0 +1,14 @@
+articulo:
+  url:   /articulo
+  param: { module: articulo, action: index }
+
+login:
+  url:   /login
+  param: { module: articulo, action: login }
+
+homepage:
+  url:   /
+  param: { module: articulo, action: index }
+
+default:
+  url:   /:module/:action/*

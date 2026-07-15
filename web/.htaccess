@@ -1,0 +1,6 @@
+Options +FollowSymLinks +ExecCGI
+RewriteEngine On
+
+# Si el archivo existe, no hacer nada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ backend.php [QSA,L]

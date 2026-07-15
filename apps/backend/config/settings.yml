@@ -1,0 +1,5 @@
+all:
+  .settings:
+    default_module: articulo
+    default_action: index
+    enabled_modules: [default, mi_primer_modulo, articulo]

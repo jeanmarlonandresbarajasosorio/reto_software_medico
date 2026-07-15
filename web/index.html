@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Login | Gestión TIC </title>
+    <style>
+        body { 
+            background: linear-gradient(135deg, #0d6efd 0%, #002366 100%); 
+            font-family: 'Inter', sans-serif;
+            display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;
+        }
+        .login-card { 
+            width: 100%; max-width: 420px; padding: 2.5rem; 
+            border-radius: 20px; border: none; box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+            background: #ffffff;
+        }
+        .logo { width: 90px; margin-bottom: 15px; }
+        #google-login-btn { display: flex; justify-content: center; margin-top: 10px; }
+        .footer-text { color: #9aa0a6; font-size: 0.8rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+
+<div class="card login-card text-center">
+    <div class="card-body">
+        <div class="mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" class="logo">
+            <h4 class="fw-bold text-dark">Gestión TIC</h4>
+            <p class="text-secondary small">Bienvenido</p>
+        </div>
+
+        <div id="google-login-btn">
+            </div>
+
+        <p class="footer-text">Acceso exclusivo para personal autorizado.<br>Copyright © 2026</p>
+    </div>
+</div>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+  function handleCredentialResponse(response) {
+    console.log("Token recibido:", response.credential);
+    
+    window.location.href = 'mantenimiento.html'; 
+  }
+
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: "151731729701-b2ahd13d8ch03shvf4mb915ajbu5m1vb.apps.googleusercontent.com",
+      callback: handleCredentialResponse
+    });
+    
+    google.accounts.id.renderButton(
+      document.getElementById("google-login-btn"),
+      { theme: "outline", size: "large", width: 340 }
+    );
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+cache/*
+log/*
+
+config/databases.yml
+
+lib/vendor/
+
+.DS_Store
+Thumbs.db
+
+.idea/
+.vscode/
+*.log
+*.tmp
