@@ -1,0 +1,13 @@
+propel:
+  article:
+    _attributes: { phpName: Article }
+    id:          ~
+    title:       { type: varchar(255), required: true }
+    body:        { type: longvarchar }
+    category_id: { type: integer, foreignTable: category, foreignReference: id }
+    created_at:  ~
+
+  category:
+    _attributes: { phpName: Category }
+    id:          ~
+    name:        { type: varchar(255), required: true }

@@ -1,0 +1,7 @@
+all:
+  propel:
+    class:          sfPropelDatabase
+    param:
+      dsn:          mysql:dbname=RETO_SOFTWARE_MEDICO;host=db
+      username:     root
+      password:     root
